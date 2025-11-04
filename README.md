@@ -1,9 +1,9 @@
-# 🐾 Cão Q-Late – Sistema de Agendamento para Pet Shop  
+# Cão Q-Late – Sistema de Agendamento para Pet Shop  
 
 > Aplicação web desenvolvida em **Java (JSP/Servlets)** utilizando o padrão **MVC**, voltada ao gerenciamento de **agendamentos, cães, clientes e serviços** em um pet shop.  
 
 
-## 📋 Índice
+## Índice
 - [Visão Geral](#-visão-geral)  
 - [Funcionalidades Principais](#-funcionalidades-principais)  
 - [Arquitetura e Tecnologias](#-arquitetura-e-tecnologias)  
@@ -17,7 +17,7 @@
 - [Licença](#-licença)  
 
 
-## 🐶 Visão Geral
+## Visão Geral
 
 O **Cão Q-Late** é um sistema web criado para simplificar o controle de **agendamentos e serviços** de um pet shop.  
 Permite cadastrar, visualizar e cancelar atendimentos, respeitando regras de negócio como o **prazo mínimo de 24h** para cancelamentos.
@@ -25,43 +25,43 @@ Permite cadastrar, visualizar e cancelar atendimentos, respeitando regras de neg
 O foco é a **organização e praticidade**, com uma interface limpa e intuitiva, e um backend sólido feito em **Java**.
 
 
-## ✨ Funcionalidades Principais
+## Funcionalidades Principais
 
-✅ **Autenticação de Administrador**  
+**Autenticação de Administrador**  
 - Login seguro (senha com hash)  
 - Controle de sessão  
 
-✅ **Gerenciamento de Agendamentos**  
+**Gerenciamento de Agendamentos**  
 - Cadastro de novos agendamentos  
 - Associação com cliente, cão e serviços  
 - Cancelamento permitido apenas até 24h antes  
 
-✅ **Listagem Inteligente**  
+**Listagem Inteligente**  
 - Filtro por data inicial  
 - Exibe serviços agrupados por agendamento  
 - Ícone de cancelamento com checagem automática  
 
-✅ **Interface Amigável**  
+**Interface Amigável**  
 - Estilo moderno com **CSS personalizado**  
 - Paleta em **dourado escuro + branco**  
 - Ícones do **Bootstrap Icons**
 
 
-## 🧩 Arquitetura e Tecnologias
+## Arquitetura e Tecnologias
 
 **Padrão Arquitetural:**  
-🧱 Modelo **MVC (Model-View-Controller)**
+Modelo **MVC (Model-View-Controller)**
 
 **Tecnologias Principais:**
-- ☕ Java 17+  
-- 🌐 Jakarta Servlet / JSP  
-- 💾 JDBC + MySQL  
-- 🎨 HTML5 / CSS3 / JSTL  
-- 🧰 Tomcat 10+  
-- 🖼️ Bootstrap Icons  
+- Java 22 
+- Jakarta Servlet / JSP  
+- JDBC + PgAdmin 9.6 + PSQL 17 
+- HTML5 / CSS3 / JS / JSTL  
+- Tomcat 10.1  
+- Bootstrap 
 
 
-## 🗂️ Estrutura do Projeto
+## Estrutura do Projeto
 
 src/
 ├── br/trcs/petshop/
@@ -99,13 +99,13 @@ src/
 
 ## ⚙️ Configuração do Ambiente
 
-### 🧱 Requisitos
+### Requisitos
 - **Java JDK 17+**  
 - **Apache Tomcat 10+**  
 - **MySQL 8+**  
 - IDE Java (Eclipse, IntelliJ, NetBeans, etc.)
 
-### 🗄️ Banco de Dados
+### Banco de Dados
 
 Execute o script SQL abaixo:
 
@@ -141,7 +141,7 @@ CREATE TABLE scheduling_services (
 );
 ```
 
-## 🔐 Segurança e Hash de Senhas
+## Segurança e Hash de Senhas
 
 A senha do administrador não está em texto puro no código — é armazenada como hash simples.
 
@@ -155,46 +155,29 @@ Exemplo de resultado:
 
 No banco de dados, a senha deve ser salva já em formato de hash:
 
-INSERT INTO admin (email, password) VALUES ('admin@petshop.com', '1521904');
+INSERT INTO admin (email, password) VALUES ('admin@petshop.com', '1569984');
 
 
-⚠️ Importante: o método hashCode() não é seguro para produção real, mas é suficiente para fins acadêmicos e demonstração.
+## Execução do Projeto
 
-
-## ▶️ Execução do Projeto
-
-1️⃣ Configure a conexão com o banco em ConnectionFactory.java:
+Configure a conexão com o banco em ConnectionFactory.java:
 
 private static final String URL = "jdbc:mysql://localhost:3306/petshop";
 private static final String USER = "root";
 private static final String PASSWORD = "sua_senha";
 
 
-2️⃣ Inicie o servidor Tomcat
-3️⃣ Acesse no navegador:
+Inicie o servidor Tomcat
+Acesse no navegador:
 
 http://localhost:8080/CaoQLate/
 
 
-4️⃣ Faça login com o administrador cadastrado
-5️⃣ Explore as seções de agendamento, cadastro e listagem
+Faça login com o administrador cadastrado
+Explore as seções de agendamento, cadastro e listagem
 
-## 📸 Capturas de Tela (opcional)
+## Capturas de Tela (opcional)
 Tela	Descrição
-🐾 Login	Página de autenticação do administrador
-📅 Agendamentos	Lista filtrável de agendamentos pendentes
-✂️ Cancelamento	Ícone de exclusão com validação de 24h
-
-(Adicione imagens no diretório /img/screens/ e referencie-as aqui)
-
-## 👨‍💻 Autores
-
-Cão Q-Late – Sistema de Agendamentos para Pet Shop
-Desenvolvido por [Seu Nome Aqui] 🐾
-📚 Curso: [Nome do curso ou disciplina]
-🏫 Instituição: [Nome da instituição]
-
-## 🏁 Licença
-
-Este projeto é de uso acadêmico e livre para estudos, melhorias e adaptações.
-Sinta-se à vontade para modificar, aprimorar e personalizar.
+Login	Página de autenticação do administrador
+Agendamentos	Lista filtrável de agendamentos pendentes
+Cancelamento	Ícone de exclusão com validação de 24h

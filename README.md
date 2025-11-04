@@ -131,18 +131,11 @@ CREATE TABLE scheduling_services (
 
 A senha do administrador não está em texto puro no código — é armazenada como hash simples.
 
-private static final int ADMIN_PASSWORD_HASH = "3333".hashCode();
-
-
-Exemplo de resultado:
-
-"3333".hashCode() → 1521904
-
-
 No banco de dados, a senha deve ser salva já em formato de hash:
 
+```
 INSERT INTO admin (email, password) VALUES ('admin@petshop.com', '1569984');
-
+```
 
 ## Execução do Projeto
 
@@ -154,13 +147,9 @@ private static final String PASSWORD = "sua_senha";
 
 
 Inicie o servidor Tomcat
-Acesse no navegador:
+Acesse no navegador: http://localhost:8080/CaoQLate/
 
-http://localhost:8080/CaoQLate/
-
-
-Faça login com o administrador cadastrado
-Explore as seções de agendamento, cadastro e listagem
+Faça login com o administrador cadastrado e explore as funcionalidades
 
 ## Capturas de Tela (opcional)
 Tela	Descrição

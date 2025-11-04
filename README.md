@@ -3,20 +3,6 @@
 Aplicação web desenvolvida em **Java (JSP/Servlets)** utilizando o padrão **MVC**, voltada ao gerenciamento de **agendamentos, cães, clientes e serviços** em um pet shop.  
 
 
-## Índice
-- [Visão Geral](#-visão-geral)  
-- [Funcionalidades Principais](#-funcionalidades-principais)  
-- [Arquitetura e Tecnologias](#-arquitetura-e-tecnologias)  
-- [Estrutura do Projeto](#-estrutura-do-projeto)  
-- [Configuração do Ambiente](#-configuração-do-ambiente)  
-- [Banco de Dados](#-banco-de-dados)  
-- [Segurança e Hash de Senhas](#-segurança-e-hash-de-senhas)  
-- [Execução do Projeto](#️-execução-do-projeto)  
-- [Capturas de Tela (opcional)](#-capturas-de-tela-opcional)  
-- [Autores](#-autores)  
-- [Licença](#-licença)  
-
-
 ## Visão Geral
 
 O **Cão Q-Late** é um sistema web criado para simplificar o controle de **agendamentos e serviços** de um pet shop.  

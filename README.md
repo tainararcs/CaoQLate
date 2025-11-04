@@ -62,7 +62,7 @@ Modelo **MVC (Model-View-Controller)**
 
 
 ## Estrutura do Projeto
-
+```
 src/
 ├── br/trcs/petshop/
 │ ├── dao/
@@ -95,9 +95,9 @@ src/
 │ └── favicon.ico
 └── WEB-INF/
 └── web.xml
+```
 
-
-## ⚙️ Configuração do Ambiente
+## Configuração do Ambiente
 
 ### Requisitos
 - **Java JDK 17+**  

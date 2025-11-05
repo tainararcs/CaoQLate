@@ -1,4 +1,4 @@
-# Cão Q-Late – Sistema de Agendamento para Pet Shop  
+# Cão Q-Late - Sistema de Agendamentos para Pet Shop  
 
 O **Cão Q-Late** é um sistema web criado para simplificar o controle de **agendamentos e serviços** de um pet shop. Permite cadastrar, visualizar e cancelar atendimentos, respeitando regras de negócio como o prazo mínimo de 24h para cancelamentos.
 

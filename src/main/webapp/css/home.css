@@ -19,7 +19,7 @@ body {
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 	letter-spacing: 1px;
 	gap: 10px;
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
@@ -38,7 +38,7 @@ h2 {
 	text-align: center;
 	font-weight: 500;
 	color: var(--black);
-	margin: 40px 0;
+	margin: 50px 0 40px;
 }
 
 /* Ícone de Logout */
@@ -92,48 +92,52 @@ h2 {
 	padding: 10px;
 }
 
-/* Imagens */
+/* Container de Imagens com carrossel 3D */
 .image-container {
-	position: relative;
-	flex: 1;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	margin-left: 12%;
-	width: 100%;
-	max-width: 680px;
-	height: 520px;
-	overflow: hidden;
-	border-radius: 20px;
-  	perspective: 1000px;
-  	margin-top: 15px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8%;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    overflow: visible;
+    perspective: 1500px;
+    margin-top: 20px;
 }
 
 .image-background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(212, 175, 55, 0.1); /* Detalhe dourado */
-	border-radius: 20px;
-	z-index: 1;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.12) 0%, 
+                rgba(212, 175, 55, 0.06) 100%);
+    border-radius: 28px;
+    z-index: 0;
+    filter: blur(20px);
 }
 
 .image-container img {
-	position: relative;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 20px;
-	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Sombra sólida */
-	transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
 }
 
 .image-container img:hover {
-	transform: scale(1.03);
-	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1.04) translateZ(20px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 .options {
@@ -154,7 +158,7 @@ h2 {
 
 .options li a {
 	text-decoration: none;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	color: var(--black);
 	display: flex;
 	align-items: center;

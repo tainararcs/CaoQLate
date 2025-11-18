@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%@ page import="br.trcs.petshop.utils.Consts" %>
 
-<jsp:include page="messages.jsp" />
+<jsp:include page="messages.jsp"/>
 
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -22,7 +20,7 @@
 	        <div class="shape"></div>
 	        <div class="shape"></div>
 	    </div>
-	    
+	   
 		<h1 class="title">Cão Q-Late</h1>
 		
 		<form method="post" action="controller" class="login">

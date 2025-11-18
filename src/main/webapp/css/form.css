@@ -91,7 +91,6 @@ input::placeholder {
 /* Botão de Envio */
 input[type="submit"] {
 	background: linear-gradient(135deg, #d6b23d 0%, #c9a733 100%);
-
 	color: white;
 	font-weight: 600;
 	border: none;
@@ -102,8 +101,8 @@ input[type="submit"] {
 	box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 	letter-spacing: 0.5px;
 	font-size: 0.8rem;
-    padding: 12px;
-    margin-top: 12px;
+   padding: 12px;
+   margin-top: 12px;
 }
 
 input[type="submit"]:hover {
@@ -143,9 +142,9 @@ input[type="radio"], input[type="checkbox"] {
 	box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
 }
 
-.size input:checked + *, 
-.client input:checked + *, 
-.dogs input:checked + *, 
+.size input:checked + *,
+.client input:checked + *,
+.dogs input:checked + *,
 .services input:checked + * {
 	background: rgba(212, 175, 55, 0.1);
 	font-weight: 500;

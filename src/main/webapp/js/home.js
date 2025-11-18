@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'img/dogs10.jpg',
     'img/dogs.jpg'
   ];
-
   const container = document.querySelector('.image-container');
   if (!container) return;
 
@@ -49,11 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let current = 0;
   const total = images.length;
-
   function updateCarousel() {
     const prev = (current - 1 + total) % total;
     const next = (current + 1) % total;
-
     images.forEach((img, i) => {
       img.style.opacity = '0';
       img.style.transform = 'translateX(0) translateZ(-100px) scale(0.7) rotateY(0deg)';
@@ -66,14 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     images[prev].style.transform = 'translateX(-200px) translateZ(-50px) scale(0.85) rotateY(15deg)';
     images[prev].style.zIndex = '1';
     images[prev].style.filter = 'brightness(0.8) blur(1px)';
-
     // Imagem atual (centro) - destaque
     images[current].style.opacity = '1';
     images[current].style.transform = 'translateX(0) translateZ(20px) scale(1.08)';
     images[current].style.zIndex = '5';
     images[current].style.filter = 'brightness(1) blur(0)';
     images[current].style.boxShadow = '0 25px 70px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.5) inset';
-
     // Imagem seguinte (direita)
     images[next].style.opacity = '0.6';
     images[next].style.transform = 'translateX(200px) translateZ(-50px) scale(0.85) rotateY(-15deg)';
@@ -109,13 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const rect = container.getBoundingClientRect();
     const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
     const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-    
+
     images[current].style.transform = `
-      translateX(${x * 15}px) 
-      translateY(${y * 15}px) 
-      translateZ(20px) 
-      scale(1.08) 
-      rotateY(${x * 5}deg) 
+      translateX(${x * 15}px)
+      translateY(${y * 15}px)
+      translateZ(20px)
+      scale(1.08)
+      rotateY(${x * 5}deg)
       rotateX(${-y * 5}deg)
     `;
   });
@@ -125,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   updateCarousel();
-  
+
   // Auto-play mais suave
   setInterval(nextImage, 5000);
 });
